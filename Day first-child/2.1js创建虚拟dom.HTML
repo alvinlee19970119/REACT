@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React</title>
+</head>
+<body>
+    <div id="text"></div>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script>
+        const VDOM = React.createElement('h1', {id: 'title1'}, React.createElement('span', {}, 'Hello React'));
+        ReactDOM.render(VDOM,document.getElementById("text"));
+    </script>
+</body>
+</html>
+<!--
+    芝士点： 1.js使用React对象下的createElement（标签名，标签属性，标签内容）方法可以将结构写入虚拟dom，写入多级需要嵌套
+-->

@@ -1,0 +1,47 @@
+<!--
+ * @Author: LIMYAE 903728124@qq.com
+ * @Date: 2021-11-17 15:38:58
+ * @LastEditors: LIMYAE 903728124@qq.com
+ * @LastEditTime: 2022-07-19 16:20:15
+ * @FilePath: \htLearnd:\code\reactLearn\Day nth-child(1)\8.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+    <div id="demo4"></div>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <script type="text/babel">
+        class  Weather extends React.Component {
+            render(){
+                const{name, age,sex} = this.props;
+                return (
+                    <ul>
+                        <li>姓名：{name}</li>
+                        <li>性别：{age}</li>
+                        <li>年龄：{sex}</li>
+                    </ul>
+                )
+            }
+        }
+        ReactDOM.render(<Weather name = '琪琪' age = '23' sex = '女'/>, document.getElementById('demo1'));
+        ReactDOM.render(<Weather name = '恰恰' age = '22' sex = '女'/>, document.getElementById('demo2'));
+        ReactDOM.render(<Weather name = '蹦蹦' age = '28' sex = '女'/>, document.getElementById('demo3'));
+        ReactDOM.render(<Weather name = '拉拉' age = '18' sex = '女'/>, document.getElementById('demo4'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .tage{
+            color: darkolivegreen;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="text"></div>
+    
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <script type="text/babel">
+       const myId = "h2Id";
+       const myData = "HELLO react";
+       const VDOM = (<div>
+                    <h2 className = "tage" id = {myId.toLocaleLowerCase()}>
+                        <span style = {{fontSize:"30px"}}>{myData.toLocaleUpperCase()}</span>
+                    </h2>
+                    <h2 className = "tage" id = {myId.toLocaleUpperCase()}>
+                        <span style = {{fontSize:"30px"}}>{myData.toLocaleUpperCase()}</span>
+                    </h2>
+                    <input type="button" value="点我" />
+        </div>);
+        ReactDOM.render(VDOM,document.getElementById('text'));
+        function majie(){
+            alert("让你点你就点？咋那么听话呢？");
+        }
+        console.log(111); 
+    </script>
+</body>
+</html>
+<!--
+    芝士点： 1.定义虚拟DOM时不要加引号
+            2.标签中混入js表达式时要加{}
+            3.指定类名时不用class，用className
+            4.内联样式要用{{key：value}}的形式写,复杂属性名需要写成小驼峰
+            5.虚拟dom定义时只能有一个根标签
+            6.标签必须闭合，类似input的自闭合就完事了
+            7.标签首字母
+                1).若小写字母开头，则将标签转为html中同名元素，若无同名元素则报错
+                2).若大写字母开头，则react就去渲染对应组件，若对应组件未定义则报错
+-->

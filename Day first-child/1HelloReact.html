@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React</title>
+</head>
+<body>
+    <div id="text"></div>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+    <script type="text/babel">
+        const VDOM = <h1>HOLLE REACT</h1>
+        ReactDOM.render(VDOM,document.getElementById("text"));
+    </script>
+</body>
+</html>
+<!--
+    芝士点： 1.react引用文件引入有顺序，因为需要先引入核心库（react.development.js），再引入react-dom.development.js
+            2.type="text/babel" 需要写成babel，jsx需要解析成js才能用
+            3.写入虚拟dom的结构因为不是html字符串所以不能加引号
+            4.render作用是将原有内容覆盖，添加新内容
+-->
